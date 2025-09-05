@@ -1,4 +1,6 @@
-/* Basic Reset */
+/* App.css - Main Application Styles */
+
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,110 +11,63 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f8f9fa;
   color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.app-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dark {
-  background: #121212;
-  color: #eaeaea;
-  box-shadow: 0 6px 20px rgba(255,255,255,0.1);
-}
-
-header {
+/* App Container */
+.app {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  flex-direction: column;
 }
 
-.greeting {
-  font-size: 2.5rem;
-  font-weight: 700;
-  animation: wave 1.5s ease-in-out infinite;
-  cursor: default;
+
+/* Main Content */
+.main-content {
+  flex: 1;
 }
 
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  15% { transform: rotate(15deg); }
-  30% { transform: rotate(-10deg); }
-  45% { transform: rotate(12deg); }
-  60% { transform: rotate(-8deg); }
-  75% { transform: rotate(8deg); }
-}
-
-.mode-toggle {
-  background: #007bff;
-  border: none;
+/* Footer */
+.footer {
+  background: #333;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  user-select: none;
+  padding: 40px 0;
+  margin-top: auto;
 }
 
-.mode-toggle:hover {
-  background: #0056b3;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.section {
-  margin-bottom: 1.8rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
+.footer-content p {
+  margin-bottom: 20px;
+  opacity: 0.8;
 }
 
-.dark .section {
-  border-color: #444;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  cursor: pointer;
+.footer-links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-  padding: 0.2rem 0.5rem;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.toggle-icon {
-  font-size: 1.2rem;
-  color: #007bff;
-}
-
-.section-content {
-  margin-top: 0.8rem;
-  line-height: 1.5;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-}
-
-a {
-  color: #007bff;
+.footer-links a {
+  color: #ccc;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.footer-links a:hover {
+  color: #667eea;
 }
 
-/* Dark mode links */
-.dark a {
-  color: #66aaff;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 20px;
+  }
 }
