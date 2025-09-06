@@ -3,5 +3,6 @@ services:
     name: mounir-portfolio
     env: node
     buildCommand: npm install && npm run build
-    startCommand: npm run server
+    startCommand: node server.js
     plan: free
+    healthCheckPath: /
