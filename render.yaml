@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: mounir-portfolio
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run server
+    plan: free
