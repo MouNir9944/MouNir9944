@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import UserDataPolicy from "./components/UserDataPolicy";
@@ -14,6 +14,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/user-data-policy" element={<UserDataPolicy />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <footer className="footer">
